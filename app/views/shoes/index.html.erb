@@ -11,21 +11,23 @@
 <div class="box">
   <div class="columns is-multiline">
     <% @shoes.each do |shoe|  %>
-      <div class="column is-one-quarter">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
+        <div class="column is-one-quarter">
+        <a href=<%= shoe_path(shoe) %>>
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+          </div>
+          <div class="content">
+            <%= shoe.product %><br>
+            <%= number_to_currency(shoe.price) %><br>
+            <%= shoe.release_date.localtime.strftime('Release on %m/%d/%y') %><br>
+            <%= shoe.release_date.localtime.strftime('At %I:%M%p') %>
           </div>
         </div>
-        <div class="content">
-          <%= shoe.product %><br>
-          <%= number_to_currency(shoe.price) %><br>
-          <%= shoe.release_date.localtime.strftime('Release on %m/%d/%y') %><br>
-          <%= shoe.release_date.localtime.strftime('At %I:%M%p') %>
-        </div>
-      </div>
+      </a>
     <% end %>
   </div>
 </div>
