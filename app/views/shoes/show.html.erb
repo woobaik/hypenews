@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @shoe.product %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @shoe.price %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @shoe.release_date %>
+</p>
+
+<p>
+  <strong>Style code:</strong>
+  <%= @shoe.style_code %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @shoe.color %>
+</p>
+
+<p>
+  <strong>Retailer:</strong>
+  <%= @shoe.retailer %>
+</p>
+
+<%= link_to 'Edit', edit_shoe_path(@shoe) %> |
+<%= link_to 'Back', shoes_path %>
