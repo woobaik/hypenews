@@ -21,4 +21,18 @@ Shoe.create(product: 'Yeezy Zebra',
             color: 'BLACK / WHITE',
             retailer: 'ADIDAS')
 
+Shoe.create(product: 'Air Fear of God Raid', 
+            price: 190.00, 
+            release_date: DateTime.new(2019,4,27,12),
+            style_code: 'AT8087-001',
+            color: 'LIGHT BONE/ BLACK-WHITE',
+            retailer: 'NIKE')
+
+Shoe.create(product: 'REACT ELEMENT 87', 
+            price: 160, 
+            release_date: DateTime.new(2019,4,30,14),
+            style_code: 'AQ1090-200',
+            color: 'DUSTY PEACH/ ATMOSPHERE GREY-DEEP ROYAL BLUE- LUCID GREEN-AMARILLI-HYPER GRAPE',
+            retailer: 'NIKE')
+
         
