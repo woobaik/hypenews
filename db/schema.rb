@@ -15,17 +15,6 @@ ActiveRecord::Schema.define(version: 2019_04_29_043855) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "releases", force: :cascade do |t|
-    t.string "product"
-    t.decimal "price"
-    t.datetime "release_date"
-    t.string "style_code"
-    t.string "color"
-    t.string "retailer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "shoes", force: :cascade do |t|
     t.string "product"
     t.decimal "price", precision: 8, scale: 2
