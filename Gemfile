@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bulma-rails', '~> 0.7.4'
 gem 'font-awesome-sass', '~> 5.8', '>= 5.8.1'
-gem 'bulma-extensions-rails', '~> 1.0', '>= 1.0.30'
+gem 'webpacker', '~> 4.0', '>= 4.0.2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
