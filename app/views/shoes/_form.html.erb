@@ -1,47 +1,59 @@
-<%= form_with(model: shoe, local: true) do |form| %>
-  <% if shoe.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(shoe.errors.count, "error") %> prohibited this shoe from being saved:</h2>
+<div class="container">
+  <%= form_with(model: shoe, local: true) do |form| %>
+    <% if shoe.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(shoe.errors.count, "error") %> prohibited this shoe from being saved:</h2>
 
-      <ul>
-      <% shoe.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% shoe.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :product, class:"label" %>
+      <div class="control has-icons-left">
+        <%= form.text_field :product, class:"input", placeholder:"Enter Product Name"%>
+        <span class="icon is-left">
+          <i class="fas fa-tshirt"></i>
+        </span>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= form.label :price, class:"label" %>
+      <div class="control has-icons-left">
+        <%= form.text_field :price, class:"input", placeholder:"Enter Price" %>
+        <span class="icon is-left">
+         <i class="far fa-money-bill-alt"></i>
+        </span>
+      </div>  
+    </div>
+
+    <div class="field">
+      <%= form.label :release_date %>
+      <%= form.datetime_select :release_date %>
+    </div>
+
+    <div class="field">
+      <%= form.label :style_code %>
+      <%= form.text_field :style_code %>
+    </div>
+
+    <div class="field">
+      <%= form.label :color %>
+      <%= form.text_field :color %>
+    </div>
+
+    <div class="field">
+      <%= form.label :retailer %>
+      <%= form.text_field :retailer %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :product %>
-    <%= form.text_field :product %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="field">
-    <%= form.label :release_date %>
-    <%= form.datetime_select :release_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :style_code %>
-    <%= form.text_field :style_code %>
-  </div>
-
-  <div class="field">
-    <%= form.label :color %>
-    <%= form.text_field :color %>
-  </div>
-
-  <div class="field">
-    <%= form.label :retailer %>
-    <%= form.text_field :retailer %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
