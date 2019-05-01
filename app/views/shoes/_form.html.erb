@@ -1,6 +1,4 @@
 <div class="container">
-<input type="date" class="datepicker">
-<input type="text" class="datepicker">
   <%= form_with(model: shoe, local: true) do |form| %>
     <% if shoe.errors.any? %>
       <div id="error_explanation">
@@ -33,13 +31,15 @@
         </span>
       </div>  
     </div>
+
     <div class="field">
-      <%= form.label :release_date %>
-      <input type="date" id="my-element">
-    </div>
-    <div class="field">
-      <%= form.label :release_date %>
-      <%= form.datetime_select :release_date %>
+      <%= form.label :release_date, class:"label" %>
+      <div class="control has-icons-left">
+        <%= form.text_field :release_date, class: "input datepicker", placeholder:"Enter Release Date" %>  
+        <span class="icon is-left">
+          <i class="far fa-calendar-alt"></i>
+        </span>
+      </div>
     </div>
 
     <div class="field">

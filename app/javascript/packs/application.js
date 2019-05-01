@@ -14,13 +14,5 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import flatpickr from "flatpickr";
 import 'stylesheet/application.css.scss';
-
-
-flatpickr(".datepicker", {
-    enableTime: true,
-    altInput: true,
-    altFormat: "F j, Y",
-    dateFormat: "Y-m-d H:i",
-});
+import '../plugin/flatpickr';
