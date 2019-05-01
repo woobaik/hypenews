@@ -18,4 +18,9 @@ import flatpickr from "flatpickr";
 import 'stylesheet/application.css.scss';
 
 
-flatpickr(".datepicker", {});
+flatpickr(".datepicker", {
+    enableTime: true,
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d H:i",
+});
