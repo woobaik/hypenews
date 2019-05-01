@@ -26,7 +26,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'bulma-rails', '~> 0.7.4'
 gem 'font-awesome-sass', '~> 5.8', '>= 5.8.1'
 gem 'webpacker', '~> 4.0', '>= 4.0.2'
 

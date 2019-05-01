@@ -1,0 +1,19 @@
+@import 'bulma/css/bulma.css';
+
+
+
+.navbar {
+    border-bottom: 1px solid #666666;
+}
+
+.main-content {
+    margin-top: 2rem;
+}
+
+.main-content a:hover {
+    background-color: #fff;
+}
+
+.main-content a {
+    color: #666666;
+}
