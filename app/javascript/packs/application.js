@@ -16,3 +16,4 @@
 // const imagePath = (name) => images(name, true)
 console.log('hei');
 import 'stylesheet/application.css.scss';
+import '../../../node_modules/bulma-calendar/dist/js/bulma-calendar'
