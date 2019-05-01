@@ -3,10 +3,10 @@ class Shoe < ApplicationRecord
     validates :product, :retailer, presence: true
 
     def default_values
-        self.price ||= 'Will Update'
-        self.release_date ||= 'Will Update'
-        self.style_code ||= 'Not specified yet'
-        self.color ||= 'Will Update soon'
+        self.price ||= 'Price Will Update'
+        self.release_date ||= 'Release Date Will Update'
+        self.style_code ||= 'Code Is Not Specified Yet'
+        self.color ||= 'Colorway Will Update soon'
     end
 end
 

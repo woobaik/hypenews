@@ -35,4 +35,14 @@ Shoe.create(product: 'REACT ELEMENT 87',
             color: 'DUSTY PEACH/ ATMOSPHERE GREY-DEEP ROYAL BLUE- LUCID GREEN-AMARILLI-HYPER GRAPE',
             retailer: 'NIKE')
 
+Shoe.create(product: 'SUPREME NIKE NBA AF1', 
+            price: 'unknowon', 
+            release_date: DateTime.new(2019,4,30,14),
+            style_code: 'AF1 SUPNIKE',
+            retailer: 'NIKE SUPREME')
+Shoe.create(product: 'YEEZY 700 ANALOG', 
+            price: 'unknown', 
+            style_code: 'YZY SP750',
+            retailer: 'ADIDAS')
+
         
