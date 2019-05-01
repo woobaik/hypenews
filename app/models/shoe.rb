@@ -1,6 +1,7 @@
 class Shoe < ApplicationRecord
     before_save :default_values
     validates :product, :retailer, presence: true
+    has_many_attached :shoe_images
 
     def default_values
         self.price ||= 'Price Will Update'
