@@ -14,5 +14,8 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
+import flatpickr from "flatpickr";
 import 'stylesheet/application.css.scss';
+
+
+flatpickr(".datepicker", {});

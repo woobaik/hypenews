@@ -1,5 +1,6 @@
 <div class="container">
-<input type="date">
+<input type="date" class="datepicker">
+<input type="text" class="datepicker">
   <%= form_with(model: shoe, local: true) do |form| %>
     <% if shoe.errors.any? %>
       <div id="error_explanation">
