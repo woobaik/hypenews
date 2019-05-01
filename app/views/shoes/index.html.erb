@@ -23,8 +23,10 @@
           <div class="content">
             <%= shoe.product %><br>
             <%= number_to_currency(shoe.price) %><br>
-            <%= shoe.release_date.localtime.strftime('Release on %m/%d/%y') %><br>
-            <%= shoe.release_date.localtime.strftime('At %I:%M%p') %>
+            <% if shoe.release_date %>
+              <%= shoe.release_date.localtime.strftime('Release on %m/%d/%y') %><br>
+              <%= shoe.release_date.localtime.strftime('At %I:%M%p') %>
+            <% end %>
           </div>
         </div>
       </a>
