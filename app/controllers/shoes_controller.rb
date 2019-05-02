@@ -28,7 +28,6 @@ class ShoesController < ApplicationController
 
     respond_to do |format|
       if @shoe.save
-        debugger
         format.html { redirect_to @shoe, notice: 'Shoe was successfully created.' }
         format.json { render :show, status: :created, location: @shoe }
       else
@@ -70,6 +69,6 @@ class ShoesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shoe_params
-      params.require(:shoe).permit(:product, :price, :release_date, :style_code, :color, :retailer, shoe_images: [])
+      params.require(:shoe).permit(:product, :price, :release_date, :style_code, :color, :retailer, :shoe_images)
     end
 end
