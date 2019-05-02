@@ -7,6 +7,16 @@ class ShoesController < ApplicationController
     @shoes = Shoe.all
   end
 
+  def upcoming
+    @shoes = Shoe.upcoming
+    render 'index'
+  end 
+
+  def past_release_page
+    @shoes = Shoe.past_release
+    render 'index'
+  end
+
   # GET /shoes/1
   # GET /shoes/1.json
   def show

@@ -9,6 +9,17 @@ class Shoe < ApplicationRecord
         self.style_code ||= 'Code Is Not Specified Yet'
         self.color ||= 'Colorway Will Update soon'
     end
+
+    def self.upcoming
+        current_time = Time.now
+        where("release_date >= ?", current_time)
+    end
+
+    def self.past_release
+        current_time = Time.now
+        where('release_date < ?', current_time) 
+    end
+
 end
 
 
