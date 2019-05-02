@@ -1,5 +1,9 @@
 module ShoesHelper
-    
+
+    def active_class(link_path)
+        current_page?(link_path) ? 'is-active' : ''
+    end
+
     def shoe_images_helper(shoe)
         if shoe.shoe_images.attached?
             image_tag(shoe.shoe_images)
@@ -22,4 +26,6 @@ module ShoesHelper
             number_to_currency(shoe.price)
         end
     end
+
+    
 end
