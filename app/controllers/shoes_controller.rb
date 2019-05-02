@@ -5,6 +5,7 @@ class ShoesController < ApplicationController
   # GET /shoes.json
   def index
     @shoes = Shoe.all
+    @page = '#'
   end
 
   def upcoming
