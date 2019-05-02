@@ -16,22 +16,14 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-              <%= shoe_images(shoe) %>
+              <%= shoe_images_helper(shoe) %>
               </figure>
             </div>
           </div>
           <div class="content">
             <%= shoe.product %><br>
-            <% if shoe.price  == 0.0 %>
-              <%= 'PRICE Will Update Soon' %><br>
-            <% else %>
-              <%= number_to_currency(shoe.price) %><br>
-            <% end %>  
-
-            <% if shoe.release_date %>
-              <%= shoe.release_date.localtime.strftime('Release on %m/%d/%y') %><br>
-              <%= shoe.release_date.localtime.strftime('At %I:%M%p') %>
-            <% end %>
+            <%= shoe_price_helper(shoe) %><br>
+            <%= shoe_release_date_helper(shoe) %>
           </div>
         </div>
       </a>
