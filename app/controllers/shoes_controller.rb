@@ -28,6 +28,7 @@ class ShoesController < ApplicationController
 
     respond_to do |format|
       if @shoe.save
+        debugger
         format.html { redirect_to @shoe, notice: 'Shoe was successfully created.' }
         format.json { render :show, status: :created, location: @shoe }
       else

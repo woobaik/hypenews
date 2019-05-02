@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-sass', '~> 5.8', '>= 5.8.1'
 gem 'webpacker', '~> 4.0', '>= 4.0.2'
 gem 'mini_magick', '~> 4.9', '>= 4.9.3'
+gem 'image_processing', '~> 1.2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
