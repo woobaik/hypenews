@@ -1,34 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Product:</strong>
-  <%= @shoe.product %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @shoe.price %>
-</p>
 
-<p>
-  <strong>Release date:</strong>
-  <%= @shoe.release_date %>
-</p>
+<div class="box">
+  <div class="columns is-vcentered">
+    <div class="column">
+      <figure class="image is-256x256">
+        <%= shoe_images_helper(@shoe)%>
+      </figure>
+    </div>
 
-<p>
-  <strong>Style code:</strong>
-  <%= @shoe.style_code %>
-</p>
+    <div class="column">
+      <div class="box has-text-centered is-size-3">
+        <%= @shoe.product %>
+      </div>
+      <div class="box">
+        <div class="columns">
+          <div class="column is-one-quarter ">
+            Price : <br>
+            Release Date :<br>
+            Style Code :<br>
+            Retailer : <br>
+            Color :<br>
+          </div>
+          <div class="column">
+            <%= shoe_price_helper(@shoe) %><br>
+            <%= shoe_release_date_helper(@shoe) + ' ' + shoe_release_time_helper(@shoe)%><br>
+            <%= @shoe.style_code %><br>
+            <%= @shoe.retailer %><br>
+            <%= @shoe.color %>
+          </div>
+      </div>
 
-<p>
-  <strong>Color:</strong>
-  <%= @shoe.color %>
-</p>
+      </div>
+    <div>
+  </div> 
+</div>
+</div>
 
-<p>
-  <strong>Retailer:</strong>
-  <%= @shoe.retailer %>
-</p>
+
+
+
 
 <%= link_to 'Edit', edit_shoe_path(@shoe) %> |
 <%= link_to 'Back', shoes_path %>

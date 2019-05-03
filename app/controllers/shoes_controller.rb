@@ -4,8 +4,7 @@ class ShoesController < ApplicationController
   # GET /shoes
   # GET /shoes.json
   def index
-    @shoes = Shoe.all
-    @page = '#'
+    @shoes = Shoe.upcoming.order('release_date ASC')
   end
 
   def upcoming
@@ -14,7 +13,7 @@ class ShoesController < ApplicationController
   end 
 
   def past_release_page
-    @shoes = Shoe.past_release.order('release_date ASC')
+    @shoes = Shoe.past_release.order('release_date DESC')
     render 'index'
   end
 

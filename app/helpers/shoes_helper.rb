@@ -14,7 +14,11 @@ module ShoesHelper
 
     def shoe_release_date_helper(shoe)
         if shoe.release_date
-            shoe.release_date.localtime.strftime('Release on %m/%d/%y')
+            if current_page?(action: 'past_release_page')
+                shoe.release_date.localtime.strftime('Released on %m/%d/%y')
+            else 
+                shoe.release_date.localtime.strftime('Release on %m/%d/%y')
+            end
         end
     end
 
