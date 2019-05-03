@@ -3,8 +3,16 @@
 
 <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
   <ul>
-    <li class=<%= active_class(shoes_upcoming_path)%>><a href=<%= shoes_upcoming_path %>><span class="activated">UPCOMING</span></a></li>
-    <li class=<%= active_class(shoes_past_release_path)%>><a href=<%= shoes_past_release_path%> aria-current="page"><span class="activated">PAST RELEASE</span></a></li>
+    <li class=<%= active_class(shoes_upcoming_path)%>>
+      <a href=<%= shoes_upcoming_path %>>
+        <span class="activated">UPCOMING</span>
+      </a>
+      </li>
+    <li class=<%= active_class(shoes_past_release_path)%>>
+      <a href=<%= shoes_past_release_path%> aria-current="page">
+        <span class="activated">PAST RELEASE</span>
+      </a>
+    </li>
   </ul>
 </nav>
 
@@ -23,7 +31,8 @@
           <div class="content">
             <%= shoe.product %><br>
             <%= shoe_price_helper(shoe) %><br>
-            <%= shoe_release_date_helper(shoe) %>
+            <%= shoe_release_date_helper(shoe) %><br>
+            <%= shoe_release_time_helper(shoe) %>
           </div>
         </div>
       </a>

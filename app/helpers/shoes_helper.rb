@@ -15,6 +15,11 @@ module ShoesHelper
     def shoe_release_date_helper(shoe)
         if shoe.release_date
             shoe.release_date.localtime.strftime('Release on %m/%d/%y')
+        end
+    end
+
+    def shoe_release_time_helper(shoe)
+        if shoe.release_date
             shoe.release_date.localtime.strftime('At %I:%M%p')
         end
     end
