@@ -9,12 +9,12 @@ class ShoesController < ApplicationController
   end
 
   def upcoming
-    @shoes = Shoe.upcoming
+    @shoes = Shoe.upcoming.order('release_date ASC')
     render 'index'
   end 
 
   def past_release_page
-    @shoes = Shoe.past_release
+    @shoes = Shoe.past_release.order('release_date ASC')
     render 'index'
   end
 
