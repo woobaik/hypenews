@@ -14,6 +14,8 @@
       </a>
     </li>
   </ul>
+
+
 </nav>
 
 <div class="box box-content">
@@ -40,8 +42,20 @@
   </div>
 </div>
 
+  <% if user_signed_in? && current_user.admin %>
+    <div class="container">
+      <div class="breadcrumb">
+      <%= link_to 'New Shoe', new_shoe_path, class:'button is-link' %>
+    
+      <% end %>
+      </div>
+      <br>
+    </div>
+
+  
 
 
 
-<%= link_to 'New Shoe', new_shoe_path %>
+
+
 
