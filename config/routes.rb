@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :carts
   devise_for :users
   root to: 'shoes#upcoming'
   get 'shoes/upcoming', to: 'shoes#upcoming'
