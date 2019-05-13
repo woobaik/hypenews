@@ -1,7 +1,10 @@
 class Shoe < ApplicationRecord
+    extend FriendlyId
+    friendly_id :product, use: :slugged
     before_save :default_values
     validates :product, :retailer, presence: true
     has_one_attached :shoe_images
+    
 
     def default_values
         self.price ||= 'Price Will Update'
@@ -31,3 +34,5 @@ end
     # t.string "retailer"
     # t.datetime "created_at", null: false
     # t.datetime "updated_at", null: false
+
+    
