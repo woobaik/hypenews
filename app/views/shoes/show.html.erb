@@ -1,9 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-
-
 <div class="box box-content">
-  <div class="columns is-vcentered">
+  <div class="columns">
     <div class="column">
       <figure class="image is-256x256">
         <%= shoe_images_helper(@shoe)%>
@@ -35,6 +31,22 @@
       </div>
     <div>
   </div> 
+  <div class="box">
+    <% if current_user %>
+        <%= form_with model: [@shoe, @comment] do |f| %>
+          <%= f.text_field :body %>
+          <%= f.submit 'commit' %>
+        <% end %>
+      <%= render 'comments/form' %>
+    <% else %>
+      not logged in
+    <% end %>
+  </div>
+  <div class="box">
+    <% @comments.each do |comment| %>
+      <%= comment.body %>
+    <% end %>
+  </div>
 </div>
 </div>
 

@@ -21,6 +21,8 @@ class ShoesController < ApplicationController
   # GET /shoes/1
   # GET /shoes/1.json
   def show
+    @comment = @shoe.comments.new
+    @comments = @shoe.comments.order('created_at DESC')
   end
 
   # GET /shoes/new
