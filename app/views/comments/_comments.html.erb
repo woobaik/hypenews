@@ -7,7 +7,7 @@
   <div class="media-content">
     <div class="content">
       <p>
-        <strong><%= comment.user.username%></strong> <small>@johnsmith</small> <small>31m</small>
+        <strong><%= comment.user.username%></strong> <small>@<%= comment.user.email_id%></small> <small><%= time_ago_in_words(comment.created_at) %> ago</small>
         <br>
         <%= comment.body %>
       </p>
