@@ -34,12 +34,16 @@
   <div class="box">
     <% if current_user %>
         <%= form_with model: [@shoe, @comment] do |f| %>
-          <%= f.text_field :body %>
+          <div class="field">
+            <div class="control">
+              <%= f.text_area :body, class:"textarea is-warning", placeholder:"Leave comment" %>
+            </div>
+          </div>
           <%= f.submit 'commit' %>
         <% end %>
       <%= render 'comments/form' %>
     <% else %>
-      not logged in
+      Please log in <%= link_to "Log in", new_user_session_path, class:"button" %>
     <% end %>
   </div>
   <div class="box">
