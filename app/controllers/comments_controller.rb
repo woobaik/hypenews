@@ -5,11 +5,12 @@ class CommentsController < ApplicationController
     def create
         @comment = @shoe.comments.new(comment_params)
         @comment.user_id = current_user.id
-        if @comment.save
-            redirect_back(fallback_location: root_path, notice: 'Comment is posted')
-        else 
-            redirect_back(fallback_location: root_path, notice: 'Oops something went wrong! please try in next 5 mins')
-        end
+        @comment.save
+        # if @comment.save
+        #     redirect_back(fallback_location: root_path, notice: 'Comment is posted')
+        # else 
+        #     redirect_back(fallback_location: root_path, notice: "Oops something went wrong! #{@comment.errors.full_messages}")
+        # end
     end
 
     private

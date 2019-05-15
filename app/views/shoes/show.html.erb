@@ -41,14 +41,15 @@
           </div>
           <%= f.submit 'commit' %>
         <% end %>
-      <%= render 'comments/form' %>
     <% else %>
       Please log in <%= link_to "Log in", new_user_session_path, class:"button" %>
     <% end %>
   </div>
-  <div class="box">
+
+  
+  <div class="box" id="comment-box">
       <% @comments.each do |comment| %>
-        <%= render partial: 'comments/comments', locals: { comment: comment } %>
+        <%= render 'comments/comment',comment: comment %>
       <% end %>
   </div>
 </div>
