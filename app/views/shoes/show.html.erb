@@ -32,27 +32,29 @@
     <div>
   </div> 
   <div class="box">
-    <% if current_user %>
-        <%= form_with model: [@shoe, @comment] do |f| %>
-          <div class="field">
-            <div class="control">
-              <%= f.text_area :body, class:"textarea is-warning", placeholder:"Leave comment" %>
+    <div class="box">
+      <% if current_user %>
+          <%= form_with model: [@shoe, @comment] do |f| %>
+            <div class="field">
+              <div class="control">
+                <%= f.text_area :body, class:"textarea is-warning", id:'message-box', placeholder:"Leave comment" %>
+              </div>
             </div>
-          </div>
-          <%= f.submit 'commit' %>
-        <% end %>
-    <% else %>
-      Please log in <%= link_to "Log in", new_user_session_path, class:"button" %>
-    <% end %>
-  </div>
+            <%= f.submit 'commit' %>
+          <% end %>
+      <% else %>
+        Please log in <%= link_to "Log in", new_user_session_path, class:"button" %>
+      <% end %>
+    </div>
 
   
-  <div class="box" id="comment-box">
-      <% @comments.each do |comment| %>
-        <%= render 'comments/comment',comment: comment %>
-      <% end %>
+      <div class="box" id="comment-box">
+          <% @comments.each do |comment| %>
+            <%= render 'comments/comment',comment: comment %>
+          <% end %>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 
 
