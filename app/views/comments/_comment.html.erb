@@ -1,4 +1,4 @@
-<article class="media">
+<article class="media reply-box">
   <figure class="media-left">
     <p class="image is-64x64">
       <img class="is-rounded"src="https://bulma.io/images/placeholders/128x128.png">
@@ -26,7 +26,11 @@
       </div>
     </nav>
   </div>
-  <div class="media-right">
-    <button class="delete reply-delete"></button>
-  </div>
+  
+  <% if current_user == comment.user %>
+    <div class="media-right">      
+        <%= link_to 'text', shoe_comment_path(comment.shoe,comment), method: :delete, class: "delete reply-delete" %>
+    </div>  
+  <% end %>
+  
 </article>
