@@ -6,7 +6,7 @@ module ShoesHelper
 
     def shoe_images_helper(shoe)
         if shoe.shoe_images.attached?
-            image_tag(shoe.shoe_images)
+            image_tag(shoe.shoe_images, class: "shoe-card-image")
         else
             image_tag('coming_soon.jpg')
         end
