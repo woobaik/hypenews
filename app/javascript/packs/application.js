@@ -16,3 +16,4 @@
 // const imagePath = (name) => images(name, true)
 import 'stylesheet/application.css.scss';
 import '../plugin/flatpickr';
+import '../script/shoe_show_comment'
