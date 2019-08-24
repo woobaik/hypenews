@@ -4,7 +4,7 @@ class Shoe < ApplicationRecord
     before_save :default_values
     validates :product, :retailer, presence: true
     has_one_attached :shoe_images
-    has_many :comments
+    has_many :comments, dependent: :destroy
 
     def default_values
         self.price ||= 'Price Will Update'
