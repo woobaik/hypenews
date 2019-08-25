@@ -1,0 +1,7 @@
+document.querySelector("#comment-" + <%= @comment.id%>).remove()
+
+
+if (document.querySelector('#comment-box').children.length < 1 ) {
+    document.querySelector('#comment-box').remove()
+} 
+

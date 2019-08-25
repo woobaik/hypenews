@@ -15,7 +15,11 @@ class CommentsController < ApplicationController
     end
 
     def destroy
-        @comment.destroy
+       @comment.destroy
+       
+       respond_to do |f| 
+        f.js
+       end
     end
     private
 

@@ -46,11 +46,13 @@
         Please Share Your Idea by Signing Up!<%= link_to "Log in", new_user_session_path, class:"button" %>
       <% end %>
     </div>
+      <% if @comments.length > 0 %>
       <div class="box" id="comment-box">
           <% @comments.each do |comment| %>
             <%= render 'comments/comment',comment: comment %>
           <% end %>
       </div>
+      <% end %>
     </div>
   </div>
 </div>
