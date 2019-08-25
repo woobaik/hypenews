@@ -1,2 +1,7 @@
 $('#comment-box').prepend("<%= j render @comment %>");
 $('#message-box').val('');
+if (document.querySelector('#comment-box').children.length > 0 ) {
+    document.querySelector('#comment-box').style.display = 'block'
+} 
+
+
