@@ -4,7 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "^4.0.2",
     "bulma": "^0.7.4",
-    "core-js": "^3.0.1",
+    "core-js": "2",
     "flatpickr": "^4.5.7",
     "node-gyp": "^4.0.0"
   },
