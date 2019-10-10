@@ -33,6 +33,7 @@ gem 'image_processing', '~> 1.2'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem "aws-sdk-s3", require: false
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
