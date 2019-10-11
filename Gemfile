@@ -10,7 +10,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -26,13 +26,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'font-awesome-sass', '~> 5.8', '>= 5.8.1'
-gem 'webpacker', '~> 4.0', '>= 4.0.7'
-gem 'mini_magick', '~> 4.9', '>= 4.9.3'
+gem 'font-awesome-sass'
+gem 'webpacker'
+gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'jquery-rails'
 gem "aws-sdk-s3", require: false
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
