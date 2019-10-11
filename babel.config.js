@@ -30,6 +30,7 @@ module.exports = function(api) {
         {
           forceAllTransforms: true,
           useBuiltIns: "entry",
+          corejs: "2",
           modules: false,
           exclude: ["transform-typeof-symbol"]
         }
@@ -49,7 +50,6 @@ module.exports = function(api) {
       [
         require("@babel/plugin-proposal-object-rest-spread").default,
         {
-          corejs: "2",
           useBuiltIns: true
         }
       ],
