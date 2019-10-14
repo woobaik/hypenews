@@ -35,7 +35,7 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'jquery-rails'
 gem "aws-sdk-s3", require: false
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-Use ActiveStorage variant
+# Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
